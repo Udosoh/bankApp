@@ -101,7 +101,7 @@ label {
   flex-direction: column;
   height: 95vh;
 }
-.con{
+.con {
   display: block;
 }
 
@@ -193,11 +193,11 @@ label {
   font-size: 0.6em;
 }
 
-.deposit  {
+.deposit {
   color: rgb(21, 112, 41);
 }
 
-.transfer  {
+.transfer {
   color: red;
 }
 
@@ -206,7 +206,7 @@ label {
   display: flex;
   align-self: center;
   border-radius: 0.4em;
- 
+
   bottom: 2em;
 }
 
@@ -215,12 +215,17 @@ label {
   text-decoration: none;
   color: white;
 }
-.downnav a:visited{
+.downnav a:visited {
   color: white;
 }
 
-.summary{
+.summary {
   overflow: scroll;
-  width: 70%;
+  width: 90%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.055);
+  display: flex;
+  flex-direction: column;
+  align-self: center;
+  border-radius: .5em;
 }
-

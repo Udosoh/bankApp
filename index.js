@@ -26,6 +26,7 @@ let usernamelogin = document.querySelector("#username");
 let passwordlogin = document.querySelector("#password");
 let submitLogin = document.querySelector(".loginsubmit");
 let summary = document.querySelector(".summary");
+let balances = document.querySelector(".number");
 
 const creatUsername = function (accounts) {
   accounts.forEach((acc) => {
@@ -36,8 +37,10 @@ creatUsername(accounts);
 console.log(accounts);
 
 const displaytransactions = function (movement) {
+  summary.innerHTML = "";
   movement.forEach(function (val, i) {
     console.log(val);
+
     let type = val > 0 ? "deposit from" : "transfer to";
     let str = `<div class="transactions">
             <div class="date">
@@ -51,11 +54,11 @@ const displaytransactions = function (movement) {
                 <div class="account">
                   <div class="owner">Iniodu Udosoh</div>
                   <div class="transactiontype">
-                    'a' ${type} "INIODU UDOSOH"
+                    a ${type} "INIODU UDOSOH"
                   </div>
                 </div>
               </div>
-              <div class="amount moneyout ${type}"> N${val}</div>
+              <div class="amount moneyout ${type}"> ${val}N </div>
             </div>
           </div>`;
 
@@ -63,4 +66,14 @@ const displaytransactions = function (movement) {
   });
 };
 
+
+
+const calculatebalance = function (movement) {
+    let balance = movement.reduce((acc, val, i) => acc + val, 0);
+    balances.innerHTML = `${balance}N`
+   
+    
+};
+
+calculatebalance(account1.movements)
 displaytransactions(account1.movements);
