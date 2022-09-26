@@ -14,7 +14,7 @@
   height: 100vh;
   background: linear-gradient(to top, black 130px, transparent 400px),
     url(./image/pexels-polina-kovaleva-5885965.jpg);
-  background-size: 1000px;
+  background-size: 1100px;
   background-repeat: no-repeat;
   background-position: -13em;
 }
@@ -27,7 +27,6 @@
   display: flex;
   flex-direction: column;
   height: 90%;
-  border: 1px solid;
 }
 .main {
   display: flex;
