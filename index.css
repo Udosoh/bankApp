@@ -16,7 +16,7 @@
     url(./image/pexels-polina-kovaleva-5885965.jpg);
   background-size: 1100px;
   background-repeat: no-repeat;
-  background-position: -13em;
+  background-position: -15em;
 }
 
 .image img {
@@ -62,10 +62,10 @@ nav {
   display: flex;
   justify-content: space-evenly;
   width: 100%;
-  border: 1px brown;
   height: 10%;
   /* background-color: rgb(125, 125, 165); */
   align-items: center;
+  border-top: 1px solid white;
 }
 .login {
   width: 50%;
@@ -81,6 +81,8 @@ nav {
   margin-top: 1em;
   line-height: 1.3em;
 }
+
+
 
 /* .app {
   background: linear-gradient(to top, black 50px, transparent 70vh),
@@ -177,4 +179,4 @@ nav {
 
 .words p {
   margin: 1em;
-} */
+} */ 
