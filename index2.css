@@ -101,6 +101,9 @@ label {
   flex-direction: column;
   height: 95vh;
 }
+.con{
+  display: block;
+}
 
 .toppage {
   height: 40%;
@@ -190,11 +193,11 @@ label {
   font-size: 0.6em;
 }
 
-.moneyin {
+.deposit  {
   color: rgb(21, 112, 41);
 }
 
-.moneyout {
+.transfer  {
   color: red;
 }
 
@@ -203,7 +206,7 @@ label {
   display: flex;
   align-self: center;
   border-radius: 0.4em;
-  position: sticky;
+ 
   bottom: 2em;
 }
 
@@ -214,5 +217,10 @@ label {
 }
 .downnav a:visited{
   color: white;
+}
+
+.summary{
+  overflow: scroll;
+  width: 70%;
 }
 
