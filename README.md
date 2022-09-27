@@ -15,3 +15,4 @@ account2:username = emmediong
          password = 4444 
          
  you can switch account to see the transactions made between accounts
+ transfer betwwen acounts using username, and the amount you want to transfer
