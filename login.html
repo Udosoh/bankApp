@@ -1,138 +1,143 @@
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
-    <script
-      src="https://kit.fontawesome.com/8e087b7926.js"
-      crossorigin="anonymous"></script>
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Nunito&family=Oswald:wght@200;300;400;500;600;700&family=Prompt:wght@500&display=swap"
-      rel="stylesheet" />
-    <link rel="stylesheet" href="index2.css" />
-  </head>
-  <body>
-    <div class="login">
-      <nav>
-        <div class="navbar">
-          <div class="text">
-            <i></i>
-            <p>Welcome</p>
-          </div>
-          <div class="img">
-            <img src="./image/GOtv_2015_logo.svg.png" alt="logo" />
-          </div>
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+        <script src="https://kit.fontawesome.com/8e087b7926.js" crossorigin="anonymous"></script>
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Nunito&family=Oswald:wght@200;300;400;500;600;700&family=Prompt:wght@500&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="index2.css">
+    </head>
+    <body>
+        <div class="login">
+            <nav>
+                <div class="navbar">
+                    <div class="text">
+                        <i></i>
+                        <p>Welcome</p>
+                    </div>
+                    <div class="img">
+                        <img src="./image/GOtv_2015_logo.svg.png" alt="logo">
+                    </div>
+                </div>
+            </nav>
+            <div class="main">
+                <form action="">
+                    <div class="details">
+                        <div class="usernames">
+                            <label for="username">Username</label>
+                            <input
+                                class="user"
+                                id="username"
+                                type="text"
+                                name="username"
+                            >
+                        </div>
+                        <div class="passwords">
+                            <label for="password">Password</label>
+                            <input
+                                type="password"
+                                name="password"
+                                class="password"
+                                id="password"
+                            >
+                        </div>
+                    </div>
+                    <div class="submit">
+                        <div class="text">
+                            <input type="checkbox" id="remember">
+                            <label for="remember">Remember Login</label>
+                        </div>
+                        <div class="button">
+                            <button class="loginsubmit" type="submit">Sign In</button>
+                        </div>
+                        <div class="passwordfg">
+                            <p>Forget Password?</p>
+                        </div>
+                    </div>
+                </form>
+            </div>
         </div>
-      </nav>
-      <div class="main">
-        <form action="">
-          <div class="details">
-            <div class="usernames">
-              <label for="username">Username</label>
-              <input class="user" id="username" type="text" name="username" />
+        <div class="con val">
+            <div class="app">
+                <div class="toppage">
+                    <div class="text">
+                        <p class="acc"></p>
+                        <p class="switch">Swicth account</p>
+                    </div>
+                    <div class="accountDetails">
+                        <p class="word">Account Details</p>
+                        <p class="number">N2.00</p>
+                    </div>
+                </div>
+                <div class="summary">
+                    <div class="transactions">
+                        <div class="date">
+                            <p>Thursday, 11 August</p>
+                        </div>
+                        <div class="transacts">
+                            <div class="label">
+                                <div class="bank">
+                                    <img alt="logo" src="./image/GOtv_2015_logo.svg.png">
+                                </div>
+                                <div class="account">
+                                    <div class="owner">Iniodu Udosoh</div>
+                                    <div class="transactiontype">
+                                        transfer to INIODU UDOSOH for food
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="amount moneyout">N 1,316</div>
+                        </div>
+                    </div>
+                    <div class="transactions">
+                        <div class="date">
+                            <p>Tuesday, 09 August</p>
+                        </div>
+                        <div class="transacts">
+                            <div class="label">
+                                <div class="bank">
+                                    <img alt="logo" src="./image/GOtv_2015_logo.svg.png">
+                                </div>
+                                <div class="account">
+                                    <div class="owner">Nsisong Udosoh</div>
+                                    <div class="transactiontype">
+                                        Credit from NSISONG UDOSOH for School Fees
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="amount moneyin">N 1,316</div>
+                        </div>
+                    </div>
+                </div>
+                <form action="">
+                    <div class="container">
+                        <h1>
+                            New Bank Transfer
+                        </h2>
+                        <div>
+                            <input
+                                id="accountname"
+                                type="text"
+                                placeholder="Account Name"
+                                class="accountname"
+                            >
+                            <label for="accountname">hi</label>
+                            <label for="accountnumber">hi</label>
+                            <input
+                                id="ammountno"
+                                placeholder="ammount"
+                                type="number"
+                                class="ammountno"
+                            >
+                            <button class="sendbutton" type="submit">Send</button>
+                        </div>
+                    </div>
+                </div>
             </div>
-            <div class="passwords">
-              <label for="password">Password</label>
-              <input
-                type="password"
-                name="password"
-                class="password"
-                id="password" />
-            </div>
-          </div>
-          <div class="submit">
-            <div class="text">
-              <input type="checkbox" id="remember" />
-              <label for="remember">Remember Login</label>
-            </div>
-            <div class="button">
-              <button class="loginsubmit" type="submit">Sign In</button>
-            </div>
-            <div class="passwordfg">
-              <p>Forget Password?</p>
-            </div>
-          </div>
-        </form>
-      </div>
-    </div>
-    <div class="con val">
-      <div class="app">
-        <div class="toppage">
-          <div class="topbar">
-            <div class="text">
-              <p class="acc">Account</p>
-              <p>Cards</p>
-            </div>
-            <div class="icons">
-              <i></i>
-              <i></i>
-            </div>
-          </div>
-          <div class="accountDetails">
-            <p class="word">Account Details</p>
-            <p class="number">N2.00</p>
-          </div>
         </div>
-
-        <div class="summary">
-          <div class="transactions">
-            <div class="date">
-              <p>Thursday, 11 August</p>
-            </div>
-            <div class="transacts">
-              <div class="label">
-                <div class="bank">
-                  <img alt="logo" src="./image/GOtv_2015_logo.svg.png" />
-                </div>
-                <div class="account">
-                  <div class="owner">Iniodu Udosoh</div>
-                  <div class="transactiontype">
-                    transfer to INIODU UDOSOH for food
-                  </div>
-                </div>
-              </div>
-              <div class="amount moneyout">N 1,316</div>
-            </div>
-          </div>
-          <div class="transactions">
-            <div class="date">
-              <p>Tuesday, 09 August</p>
-            </div>
-            <div class="transacts">
-              <div class="label">
-                <div class="bank">
-                  <img alt="logo" src="./image/GOtv_2015_logo.svg.png" />
-                </div>
-                <div class="account">
-                  <div class="owner">Nsisong Udosoh</div>
-                  <div class="transactiontype">
-                    Credit from NSISONG UDOSOH for School Fees
-                  </div>
-                </div>
-              </div>
-              <div class="amount moneyin">N 1,316</div>
-            </div>
-          </div>
-        </div>
-      </div>
-      <nav class="downnav">
-        <a class="Home">
-          <p>Home</p>
-        </a>
-        <a href="./firstpage.html" class="Payements">
-          <p>Payements</p>
-        </a>
-        <a class="Market">
-          <p>Market</p>
-        </a>
-        <a class="Settings">
-          <p>Settings</p>
-        </a>
-      </nav>
-    </div>
-    <script src="index.js"></script>
-  </body>
+        <script src="index.js"></script>
+    </body>
 </html>
