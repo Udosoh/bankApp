@@ -1,11 +1,11 @@
 const account1 = {
   owner: "Iniodu Udosoh",
   movements: [5000, 3400, -150, -790, -3210, -1000, 8500, -30],
-  ppassword: 2222,
+  password: 2222,
 };
 const account2 = {
   owner: "Nsisong Udosoh",
-  movements: [5000, 3400, -150, -790, -3210, -1000, 8500, -30],
+  movements: [50000, 700, -150, -9090, -3210, -76000, 85000, -30],
   password: 2222,
 };
 
@@ -27,6 +27,8 @@ let passwordlogin = document.querySelector("#password");
 let submitLogin = document.querySelector(".loginsubmit");
 let summary = document.querySelector(".summary");
 let balances = document.querySelector(".number");
+let apppage = document.querySelector(".con");
+let loginpage = document.querySelector(".login");
 
 const creatUsername = function (accounts) {
   accounts.forEach((acc) => {
@@ -34,13 +36,10 @@ const creatUsername = function (accounts) {
   });
 };
 creatUsername(accounts);
-console.log(accounts);
 
 const displaytransactions = function (movement) {
   summary.innerHTML = "";
   movement.forEach(function (val, i) {
-    console.log(val);
-
     let type = val > 0 ? "deposit from" : "transfer to";
     let str = `<div class="transactions">
             <div class="date">
@@ -58,7 +57,7 @@ const displaytransactions = function (movement) {
                   </div>
                 </div>
               </div>
-              <div class="amount moneyout ${type}"> ${val}N </div>
+              <div class="amount moneyout ${type}"> ${val} N </div>
             </div>
           </div>`;
 
@@ -66,14 +65,24 @@ const displaytransactions = function (movement) {
   });
 };
 
-
-
 const calculatebalance = function (movement) {
-    let balance = movement.reduce((acc, val, i) => acc + val, 0);
-    balances.innerHTML = `${balance}N`
-   
-    
+  let balance = movement.reduce((acc, val, i) => acc + val, 0);
+  balances.innerHTML = `${balance} N`;
 };
 
-calculatebalance(account1.movements)
-displaytransactions(account1.movements);
+let currentacount;
+
+submitLogin.addEventListener("click", function (e) {
+  e.preventDefault();
+
+  currentacount = accounts.find((acc) => acc.username === usernamelogin.value);
+  if (
+    currentacount?.username === usernamelogin.value &&
+    currentacount.password === Number(passwordlogin.value)
+  ) {
+    apppage.classList.remove("val");
+    loginpage.classList.add("val");
+    calculatebalance(currentacount.movements);
+    displaytransactions(currentacount.movements);
+  }
+});

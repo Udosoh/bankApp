@@ -92,17 +92,10 @@ label {
   accent-color: rgb(3, 3, 3);
 }
 
-.login {
-  display: none;
-}
-
 .app {
   display: flex;
   flex-direction: column;
   height: 95vh;
-}
-.con {
-  display: block;
 }
 
 .toppage {
@@ -227,5 +220,10 @@ label {
   display: flex;
   flex-direction: column;
   align-self: center;
-  border-radius: .5em;
+  border-radius: 0.5em;
+}
+
+
+.val {
+  display: none;
 }
