@@ -90,6 +90,7 @@ const displaytransactions = function (acco) {
   });
 
   acco.movements.forEach(function (val, i) {
+    let transType = val > 0 ? "CREDIT" : "DERBIT";
     let type = val > 0 ? "deposit from" : "transfer to";
     let str = `<div class="transactions">
             <div class="date">
@@ -101,7 +102,7 @@ const displaytransactions = function (acco) {
                   <img alt="logo" src="./image/GOtv_2015_logo.svg.png" />
                 </div>
                 <div class="account">
-                  <div class="owner">Iniodu Udosoh</div>
+                  <div class="owner">${transType}</div>
                   <div class="transactiontype">
                     a ${type} <span class="namess" >${dave[i]}</span>
                   </div>
