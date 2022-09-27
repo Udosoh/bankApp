@@ -12,6 +12,16 @@ const account1 = {
     "Erinma love",
     "Crush",
   ],
+  movementDate: [
+    "2019-11-18T21:13:54.178Z",
+    "2019-11-20T21:08:17.108Z",
+    "2019-11-31T21:21:30.578Z",
+    "2019-11-31T21:21:30.578Z",
+    "2020-01-02T21:11:37.448Z",
+    "2020-04-11T21:00:47.111Z",
+    "2021-06-28T21:23:10.666Z",
+    "2021-12-02T21:03:05.178Z",
+  ],
 };
 const account2 = {
   owner: "Nsisong Udosoh",
@@ -26,6 +36,16 @@ const account2 = {
     "Grand Ma",
     "Erinma Blessing",
     "Land Lord",
+  ],
+  movementDate: [
+    "2019-11-18T21:13:54.178Z",
+    "2019-11-20T21:08:17.108Z",
+    "2019-11-31T21:21:30.578Z",
+    "2020-01-02T21:11:37.448Z",
+    "2020-01-02T21:11:37.448Z",
+    "2020-04-11T21:00:47.111Z",
+    "2021-06-28T21:23:10.666Z",
+    "2021-12-02T21:03:05.178Z",
   ],
 };
 
@@ -43,6 +63,16 @@ const account3 = {
     "Emmedion Obot",
     "Iniodu Udosoh",
   ],
+  movementDate: [
+    "2019-11-18T21:13:54.178Z",
+    "2019-11-20T21:08:17.108Z",
+    "2019-11-31T21:21:30.578Z",
+    "2020-01-02T21:11:37.448Z",
+    "2020-01-02T21:11:37.448Z",
+    "2020-04-11T21:00:47.111Z",
+    "2021-06-28T21:23:10.666Z",
+    "2021-12-02T21:03:05.178Z",
+  ],
 };
 
 const account4 = {
@@ -58,6 +88,17 @@ const account4 = {
     "Uduak enyoung",
     "Colleauge",
     "Emma Love",
+  ],
+  movementDate: [
+    "2019-11-18T21:13:54.178Z",
+    "2019-11-20T21:08:17.108Z",
+    "2019-11-31T21:21:30.578Z",
+    "2019-11-31T21:21:30.578Z",
+
+    "2020-01-02T21:11:37.448Z",
+    "2020-04-11T21:00:47.111Z",
+    "2021-06-28T21:23:10.666Z",
+    "2021-12-02T21:03:05.178Z",
   ],
 };
 const accounts = [account1, account2, account3, account4];
@@ -90,11 +131,17 @@ const displaytransactions = function (acco) {
   });
 
   acco.movements.forEach(function (val, i) {
+    const date = new Date(acco.movementDate[i]);
+    const day = `${date.getDate()}`.padStart(2, 0);
+    const month = `${date.getMonth() + 1}`.padStart(2, 0);
+    const year = date.getFullYear();
+    const dispalydate = `${day}/ ${month}/ ${year}`;
+
     let transType = val > 0 ? "CREDIT" : "DERBIT";
     let type = val > 0 ? "deposit from" : "transfer to";
     let str = `<div class="transactions">
             <div class="date">
-              <p>Thursday, 11 August</p>
+              <p>${dispalydate}</p>
             </div>
             <div class="transacts">
               <div class="label">
@@ -147,11 +194,22 @@ send.addEventListener("click", function (e) {
   e.preventDefault();
   reciver = accounts.find((val) => val.username === transfername.value);
   let ammount = Number(transferno.value);
+  const date = new Date();
+  const day = `${date.getDate()}`.padStart(2, 0);
+  const month = `${date.getMonth() + 1}`.padStart(2, 0);
+  const year = date.getFullYear();
 
   console.log(reciver);
 
-  if (reciver && ammount > 0 && currentacount.balance >= ammount) {
+  if (
+    reciver &&
+    ammount > 0 &&
+    currentacount.balance >= ammount &&
+    currentacount.username !== reciver.username
+  ) {
+    reciver.movementDate.push(new Date());
     reciver.movements.push(ammount);
+    currentacount.movementDate.push(new Date());
     currentacount.movements.push(-ammount);
     currentacount.recipent.push(transfername.value);
     reciver.recipent.push(currentacount.username);
